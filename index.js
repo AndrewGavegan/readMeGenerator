@@ -114,7 +114,7 @@ return `
     My application ${data.description}
 ---
 ## Table of contents
-*${data.contents.filter(element => {
+* ${data.contents.filter(element => {
 if (!element){
 return false;
 }
@@ -136,7 +136,7 @@ else return true
     ${data.license}
 ---
 ## Badges 
-${data.license.filter(element => {
+    ${data.license.filter(element => {
 if (element == "Apache 2.0") {
 data.license.push("[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)");
 }
@@ -154,12 +154,12 @@ data.license.push("[![License: Unlicense](https://img.shields.io/badge/license-U
 }
 })
 }
-    ${data.license[1]}
+ ${data.license[1]}
 ---
 
 ## Contributing 
     ${data.contributing}
-Note: the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard
+    Note: the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard
 ---
 
 ## Test
