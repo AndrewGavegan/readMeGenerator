@@ -167,7 +167,7 @@ Note: the [Contributor Covenant](https://www.contributor-covenant.org/) is an in
 ---
 
 ## Questions
-    Please direct questions to: ${data.questions}
+    Please direct questions to: ${data.questions} and ${data.email}
 `;
 }
 
