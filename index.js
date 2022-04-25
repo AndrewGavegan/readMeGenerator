@@ -104,3 +104,68 @@ const writeFileAsync = util.promisify(fs.writeFileAsync);
         },
      ]);
  }
+
+ function generateREADME( data ) {
+     console.log( data );
+     return `
+     
+     # README for ${data.title}
+
+     ## Description
+
+     My application ${data.description}
+     
+     ## Table of contents
+     * ${data.contents.filter(element => {
+        if (!element){
+            return false;
+        }
+        else return true
+    }).join("\n* ")
+        }
+
+        ## Installation
+        ${data.installation}
+
+        ## Usage 
+        ${data.useages}
+
+        ## Credits ${data.credits}
+
+        ## License
+        ${data.license}
+
+        ## Badges 
+        ${data.license.filter(element => {
+            if (element == "Apache 2.0") {
+                data.license.push("[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)");
+            }
+            if (element == "GNU GPL v3") {
+                data.license.push("[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)");
+            }
+            if (element == "BSD 3-Clause License") {
+                data.license.push("[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)");
+            }
+            if (element == "MIT") {
+                data.license.push("[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)");
+            }
+            if (element == "Unlicensed") {
+                data.license.push("[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)");
+            }
+        })
+        }
+            ${data.license[1]}
+
+        ## Contributing 
+        ${data.contributing}
+        Note: the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard
+
+        ## Test
+        ${data.tests}
+
+        ## Questions
+        Please direct questions to: ${data.questions}
+     `;
+     }
+
+     
