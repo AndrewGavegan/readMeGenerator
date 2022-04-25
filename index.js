@@ -108,14 +108,12 @@ const writeFileAsync = util.promisify(fs.writeFile);
  function generateREADME( data ) {
      console.log( data );
      return `
-     
-     # README for ${data.title}
-
-     ## Description
-
+# README for ${data.title}
+---
+## Description
      My application ${data.description}
-     
-     ## Table of contents
+---
+## Table of contents
      * ${data.contents.filter(element => {
         if (!element){
             return false;
@@ -123,19 +121,20 @@ const writeFileAsync = util.promisify(fs.writeFile);
         else return true
     }).join("\n* ")
         }
+---
 
-        ## Installation
+## Installation
         ${data.installation}
-
-        ## Usage 
+---
+## Usage 
         ${data.useages}
-
-        ## Credits ${data.credits}
-
-        ## License
+---
+## Credits ${data.credits}
+---
+## License
         ${data.license}
-
-        ## Badges 
+---
+## Badges 
         ${data.license.filter(element => {
             if (element == "Apache 2.0") {
                 data.license.push("[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)");
@@ -155,15 +154,18 @@ const writeFileAsync = util.promisify(fs.writeFile);
         })
         }
             ${data.license[1]}
+---
 
-        ## Contributing 
+## Contributing 
         ${data.contributing}
         Note: the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard
+---
 
-        ## Test
+## Test
         ${data.tests}
+---
 
-        ## Questions
+## Questions
         Please direct questions to: ${data.questions}
      `;
      }
