@@ -111,10 +111,10 @@ return `
 # README for ${data.title}
 ---
 ## Description
-My application ${data.description}
+    My application ${data.description}
 ---
 ## Table of contents
-* ${data.contents.filter(element => {
+*${data.contents.filter(element => {
 if (!element){
 return false;
 }
@@ -124,15 +124,16 @@ else return true
 ---
 
 ## Installation
-${data.installation}
+    ${data.installation}
 ---
 ## Usage 
-${data.useages}
+    ${data.useages}
 ---
-## Credits ${data.credits}
+## Credits 
+    ${data.credits}
 ---
 ## License
-${data.license}
+    ${data.license}
 ---
 ## Badges 
 ${data.license.filter(element => {
@@ -153,20 +154,20 @@ data.license.push("[![License: Unlicense](https://img.shields.io/badge/license-U
 }
 })
 }
-${data.license[1]}
+    ${data.license[1]}
 ---
 
 ## Contributing 
-${data.contributing}
+    ${data.contributing}
 Note: the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard
 ---
 
 ## Test
-${data.tests}
+    ${data.tests}
 ---
 
 ## Questions
-Please direct questions to: ${data.questions}
+    Please direct questions to: ${data.questions}
 `;
 }
 
