@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 
-const writeFileAsync = util.promisify(fs.writeFileAsync);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // function for questions that you will be asked //
  function promptUser() {
@@ -168,4 +168,27 @@ const writeFileAsync = util.promisify(fs.writeFileAsync);
      `;
      }
 
-     
+     async function init() {
+         console.log("Hello and Welcome to the README Generator")
+         try {
+
+            const data = await promptUser();
+
+            const md = generateREADME( data );
+
+            const filename = data.title.toLowerCase().split(' ').join(' ') + ".md";
+
+            console.log(filename);
+
+            await writeFileAsync(filename, md);
+
+            console.log(data.license)
+            console.log(data.license[1]);
+
+            console.log("Successfully created README.md");
+        } catch (err) {
+            console.log(err);
+        }
+     }
+
+     init();

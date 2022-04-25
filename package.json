@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/AndrewGavegan/readMeGenerator#readme",
   "dependencies": {
-    "inquirer": "^8.2.2"
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.2.2",
+    "util": "^0.12.4"
   }
 }
