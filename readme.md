@@ -33,7 +33,7 @@
 
 ## Contributing 
     contribute according to these fake standards
-Note: the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard
+    Note: the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard
 ---
 
 ## Test
