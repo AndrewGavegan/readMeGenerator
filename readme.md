@@ -19,7 +19,7 @@
     To install this application, the user runs the “index.js” file in Node. Running the index file will prompt the user for a series of questions relating to the creation of a README file. Using a template literal, the user input is then assigned to elements and then written to a new file, which is named based on the name of the application for which the README is being written. The README file is created in the same directory as the index file and when opened in the browser, will show as a polished marked README document.
 ---
 ## Usage 
-    undefined
+    The application requires three Node packages in the first instance: inquirer, fs and util. Those packages are used together to prompt the user for information and  create an asynchronous function with a promise (init), within which the “generateREAME” function is called, which assigns the user input to the relevant parts of the markdown template literal. Badges are assigned based on the license chosen by the user (calling on the badge sources in shields.io). The fs package is used to write the file (also asynchronously, and promisified in order to do so) and the filename is modified to reflect the name of the application. 
 ---
 ## Credits 
     This was a solo project, however the project relied heavily on Node JS and the packages mentioned above
