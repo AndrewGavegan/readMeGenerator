@@ -4,6 +4,7 @@
 ## Description
 
 My application is used to generate a README file in markdown format, using Node JS and the inquirer, fs and util packages. It prompts the user for input, places the user input into a template and then writes the data to a new .md file.
+
 ---
 ## Table of contents
 * Title
