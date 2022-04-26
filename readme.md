@@ -25,7 +25,7 @@ For installation, first run npm install -y in the command line, this will instal
 ---
 ## Usage 
 
-To use this application, answer the questions that you are prompted appropriately after you have run the node command. Once you have answered all the prompts, a .md file with the title of your choosing (readme in nearly all cases) will be created in the same directory as the index.JS file.
+To use this application, answer the questions that you are prompted appropriately after you have run the node command. Once you have answered all the prompts, a .md file with the title of your choosing (readme in nearly all cases) will be created in the same directory as the index.JS file. A video demonstration on how to use this application can be viewed at https://watch.screencastify.com/v/O3qEviMbPv1N9Ksk450E 
 
 ---
 ## Credits 
