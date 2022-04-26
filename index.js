@@ -5,7 +5,7 @@ const util = require("util");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// function for questions that you will be asked //
+// prompt function for the questions that you will be asked //
  function promptUser() {
      return inquirer.prompt([
         {
@@ -105,6 +105,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
      ]);
  }
 
+//  function that populates it with the answers to your prompt //
 function generateREADME( data ) {
 console.log( data );
 return `
@@ -154,7 +155,7 @@ data.license.push("[![License: Unlicense](https://img.shields.io/badge/license-U
 }
 })
 }
- ${data.license[1]}
+    ${data.license[1]}
 ---
 
 ## Contributing 
@@ -171,6 +172,7 @@ data.license.push("[![License: Unlicense](https://img.shields.io/badge/license-U
 `;
 }
 
+//  generating new file and naming it what you answered in the prompt question //
      async function init() {
          console.log("Hello and Welcome to the README Generator")
          try {
@@ -193,5 +195,5 @@ data.license.push("[![License: Unlicense](https://img.shields.io/badge/license-U
             console.log(err);
         }
      }
-
+// calling init function //
      init();
