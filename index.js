@@ -110,9 +110,12 @@ function generateREADME( data ) {
 console.log( data );
 return `
 # README for ${data.title}
+
 ---
 ## Description
-    My application ${data.description}
+
+My application ${data.description}
+
 ---
 ## Table of contents
 * ${data.contents.filter(element => {
@@ -125,19 +128,28 @@ else return true
 ---
 
 ## Installation
-    ${data.installation}
+
+${data.installation}
+
 ---
 ## Usage 
-    ${data.useages}
+
+${data.useage}
+
 ---
 ## Credits 
-    ${data.credits}
+
+${data.credits}
+
 ---
 ## License
-    ${data.license}
+
+${data.license}
+
 ---
-## Badges 
-    ${data.license.filter(element => {
+## Badges
+
+${data.license.filter(element => {
 if (element == "Apache 2.0") {
 data.license.push("[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)");
 }
@@ -155,20 +167,23 @@ data.license.push("[![License: Unlicense](https://img.shields.io/badge/license-U
 }
 })
 }
-    ${data.license[1]}
----
+${data.license[1]}
 
+---
 ## Contributing 
-    ${data.contributing}
-    Note: the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard
----
 
+${data.contributing} Note: the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard.
+
+---
 ## Test
-    ${data.tests}
+
+${data.tests}
+
 ---
 
 ## Questions
-    Please direct questions to: ${data.questions} and ${data.email}
+
+Please direct questions to: ${data.questions} and ${data.email}
 `;
 }
 
