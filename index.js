@@ -108,13 +108,14 @@ const writeFileAsync = util.promisify(fs.writeFile);
 //  function that populates it with the answers to your prompt //
 function generateREADME( data ) {
 console.log( data );
+// text inside template literals not tabbed and not stacked together so that it will format properlly in github as a .md file
 return `
 # README for ${data.title}
 
 ---
 ## Description
 
-My application ${data.description}
+${data.description}
 
 ---
 ## Table of contents
@@ -144,7 +145,7 @@ ${data.credits}
 ---
 ## License
 
-${data.license}
+${data.license} 
 
 ---
 ## Badges
@@ -172,7 +173,7 @@ ${data.license[1]}
 ---
 ## Contributing 
 
-${data.contributing} Note: the [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard.
+${data.contributing} ${data.email}
 
 ---
 ## Test
@@ -183,7 +184,7 @@ ${data.tests}
 
 ## Questions
 
-Please direct questions to: ${data.questions} and ${data.email}
+Please also direct questions to: ${data.questions} and ${data.email}
 `;
 }
 
@@ -201,9 +202,6 @@ Please direct questions to: ${data.questions} and ${data.email}
             console.log(filename);
 
             await writeFileAsync(filename, md);
-
-            console.log(data.license)
-            console.log(data.license[1]);
 
             console.log("Successfully created README.md");
         } catch (err) {
