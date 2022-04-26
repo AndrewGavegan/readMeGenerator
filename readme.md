@@ -25,7 +25,7 @@ To install this application, the user runs the “index.js” file in Node. Runn
 ---
 ## Usage 
 
-The application requires three Node packages in the first instance: inquirer, fs and util. Those packages are used together to prompt the user for information and create an asynchronous function with a promise (init), within which the “generateREAME” function is called, which assigns the user input to the relevant parts of the markdown template literal. Badges are assigned based on the license chosen by the user (calling on the badge sources in shields.io). The fs package is used to write the file (also asynchronously, and promisified in order to do so) and the filename is modified to reflect the name of the application. 
+The application requires three Node packages in the first instance: inquirer, fs and util. Those packages are used together to prompt the user for information and create an asynchronous function with a promise (init), within which the “generateREAME” function is called, which assigns the user input to the relevant parts of the markdown template literal. Badges are assigned based on the license chosen by the user (calling on the badge sources in shields.io). The fs package is used to write the file (also asynchronously, and promisified in order to do so) and the filename is modified to reflect the name of the application. A demonstration of how to use this application can be viewed at https://watch.screencastify.com/v/WgsH70cQegwZI7SAha5V
 
 ---
 ## Credits 
